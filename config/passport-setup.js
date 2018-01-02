@@ -6,7 +6,7 @@ const keys=require('./keys');
 console.log("Initailizing Passport auzre statorgy");
 passport.use(new AzureADStrategy({
 //options for AzureAD strategy
-identityMetadata: 'https://login.microsoftonline.com/kasiazure.onmicrosoft.com/v2.0/.well-known/openid-configuration',
+identityMetadata: 'https://login.microsoftonline.com/<domain ID>/v2.0/.well-known/openid-configuration',
 responseType: 'code id_token',
 responseMode: 'form_post',
 clientID: keys.azureAD.clientID,
