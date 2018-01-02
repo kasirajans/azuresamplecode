@@ -16,7 +16,7 @@ redirectUrl:'http://localhost:3000/auth/azuread/redirect',
 allowHttpForRedirectUrl: true
 },function(iss, sub, profile, accessToken, refreshToken, done) {
     //passport callback function
-    console.log(profile);
+    console.log(profile._json);
     if (!profile.oid) {
         return done(new Error("No oid found"), null);
       }
